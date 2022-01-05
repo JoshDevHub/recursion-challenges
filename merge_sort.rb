@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# TODO: Make neater
 def merge(left_half, right_half)
   merged = []
   left_idx = 0
