@@ -7,20 +7,13 @@ def merge(left_half, right_half)
   right_idx = 0
   while merged.length < left_half.length + right_half.length
     if right_half[right_idx].nil? || left_half[left_idx].nil?
-      next_el = left_half[left_idx] || right_half[right_idx]
-      merged << next_el
+      merged.push(left_half[left_idx] || right_half[right_idx])
       left_half[left_idx].nil? ? right_idx += 1 : left_idx += 1
-    # if right_half[right_idx].nil?
-    #   merged << left_half[left_idx]
-    #   left_idx += 1
-    # elsif left_half[left_idx].nil?
-    #   merged << right_half[right_idx]
-    #   right_idx += 1
     elsif left_half[left_idx] < right_half[right_idx]
-      merged << left_half[left_idx]
+      merged.push(left_half[left_idx])
       left_idx += 1
     else
-      merged << right_half[right_idx]
+      merged.push(right_half[right_idx])
       right_idx += 1
     end
   end
