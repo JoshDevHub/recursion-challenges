@@ -14,12 +14,12 @@ def fibs(num)
   results
 end
 
-def fibs_rec(num, results = [0, 1])
-  return results if results.length >= num
+def fibs_rec(num, sequence = [0, 1])
+  return sequence.first(num) if sequence.length >= num
 
-  results << results[-1] + results[-2]
-  fibs_rec(num, results)
+  sequence << sequence[-1] + sequence[-2]
+  fibs_rec(num, sequence)
 end
 
-p fibs(3) # -> [0, 1, 1]
-p fibs_rec(3) # -> [0, 1, 1]
+p fibs(8) # -> [0, 1, 1]
+p fibs_rec(8) # -> [0, 1, 1]
