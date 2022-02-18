@@ -21,5 +21,5 @@ def fibs_rec(num, sequence = [0, 1])
   fibs_rec(num, sequence)
 end
 
-p fibs(8) # -> [0, 1, 1]
-p fibs_rec(8) # -> [0, 1, 1]
+p fibs(8) # -> [0, 1, 1, 2, 3, 5, 8, 13]
+p fibs_rec(8) # -> [0, 1, 1, 2, 3, 5, 8, 13]
