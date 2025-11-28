@@ -3,7 +3,7 @@ module RecursiveAlgorithms
 
   def fibs(num)
     results = [0, 1]
-    return results if results.length >= num
+    return results.first(num) if results.length >= num
 
     first, second = results
     (num - 3).downto(0) do
