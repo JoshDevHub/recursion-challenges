@@ -42,4 +42,22 @@ RSpec.describe RecursiveAlgorithms do
   describe "::fibs_rec" do
     it_behaves_like "Fibonacci sequence", :fibs_rec
   end
+
+  describe "::merge_sort" do
+    it "sorts an empty array" do
+      expect(described_class.merge_sort([])).to eq []
+    end
+
+    it "sorts an array with one element" do
+      expect(described_class.merge_sort([1])).to eq [1]
+    end
+
+    it "sorts an array of positive integers" do
+      expect(described_class.merge_sort([5, 3, 4, 1, 2])).to eq [1, 2, 3, 4, 5]
+    end
+
+    it "sorts an array of various integers" do
+      expect(described_class.merge_sort([-1, -10, 5, 50, 100, -8])).to eq [-10, -8, -1, 5, 50, 100]
+    end
+  end
 end
